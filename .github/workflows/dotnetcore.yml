@@ -9,9 +9,9 @@ on:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: Install dependencies
-      run: sudo docker-compose up --build
+      run: sudo docker-compose up -da --build
