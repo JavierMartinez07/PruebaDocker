@@ -15,6 +15,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install dependencies
       run: |
-      docker build . -t buildprueba
-      docker run -d buildprueba
+        docker build . -t buildprueba
+        docker run -d buildprueba
 
