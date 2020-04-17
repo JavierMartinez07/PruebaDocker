@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include=".github\workflows\appCI.yml" />
     <None Include=".github\workflows\dotnetcore.yml" />
   </ItemGroup>
 
