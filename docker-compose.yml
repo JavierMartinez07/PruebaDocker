@@ -8,6 +8,11 @@ services:
       - db
   db:
     image: "microsoft/mssql-server-linux"
+    volumes:
+      - "/home/javier/mssql/data:/var/opt/mssql/data"
+      - "/home/javier/mssql/log:/var/opt/mssql/log"
+      - "/home/javier/mssql/secrets:/var/opt/mssql/secrets"
+
     environment:
-      SA_PASSWORD: "Isl8098665663"
+      SA_PASSWORD: "Isl8098665663@"
       ACCEPT_EULA: "Y"
