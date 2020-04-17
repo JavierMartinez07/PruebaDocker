@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install dependencies
-      run: sudo docker-compose up -dasa --build
+      run: sudo docker-compose up -da --build
