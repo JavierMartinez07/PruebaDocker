@@ -14,6 +14,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: run docker compose
       run: |
-      sudo docker-compose up -d --build
-      sudo docker images
-      sudo doker ps
+        sudo docker-compose up -d --build
+        sudo docker images
+        sudo doker ps
