@@ -16,4 +16,5 @@ jobs:
       run: |
         sudo docker-compose up -d --build
         sudo docker images
-        sudo doker ps
+        sudo docker ps
+        sudo docker ps -a
