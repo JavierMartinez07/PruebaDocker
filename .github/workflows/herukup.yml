@@ -18,6 +18,8 @@ jobs:
         APP_NAME: ${{ 'pruebaheroku057' }}
       run: |     
         docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
+        sudo snap install --classic heroku
         heroku container:push web -a $APP_NAME
         heroku container:release web -a $APP_NAME
-        heroku logs --tail
+        heroku logs --app $APP_NAME
+        
