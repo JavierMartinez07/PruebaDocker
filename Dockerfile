@@ -14,6 +14,7 @@ FROM build AS publish
 RUN dotnet publish "PruebaDocker.csproj" -c Release -o /app/publish
 
 FROM base AS final
+ENV ASPNETCORE_Environment=Production
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "PruebaDocker.dll"]
