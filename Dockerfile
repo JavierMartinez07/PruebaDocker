@@ -11,7 +11,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
 WORKDIR /src
 COPY ["PruebaDocker.csproj", ""]
 RUN dotnet restore "./PruebaDocker.csproj"
-RUN dotnet dev-certs https --trust
+CMD dotnet dev-certs https --trust
 COPY . .
 WORKDIR "/src/."
 RUN dotnet build "PruebaDocker.csproj" -c Release -o /app/build
